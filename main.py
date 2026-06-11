@@ -37,13 +37,13 @@ ALLOWED_ORIGINS = [
     "http://localhost:4200",      # Angular dev
     "http://localhost:8080",      # Backend dev
     "http://localhost:3000",      # React (si aplica)
-    "https://tu-dominio.com",     # Producción
+    "https://segundoparcialsw.vercel.app", # Producción Vercel
 ]
 
 app.add_middleware(
     CORSMiddleware,
     allow_origins=ALLOWED_ORIGINS,
-    allow_origin_regex="http://localhost:.*",
+    allow_origin_regex="https://.*\\.vercel\\.app",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
